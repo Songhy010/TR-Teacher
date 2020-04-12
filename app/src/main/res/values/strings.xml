@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TR Teacher</string>
+    <string name="information">Information</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="version">Version</string>
+</resources>
