@@ -13,19 +13,19 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class AdapterPager extends RecyclerView.Adapter<AdapterPager.ItemHolder> {
+public class AdapterTeach extends RecyclerView.Adapter<AdapterTeach.ItemHolder> {
     private Context context;
     private JSONArray array;
 
 
-    public AdapterPager(Context context, JSONArray array) {
+    public AdapterTeach(Context context, JSONArray array) {
         this.context = context;
         this.array = array;
     }
     @NonNull
     @Override
-    public AdapterPager.ItemHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-       View view = LayoutInflater.from(context).inflate(R.layout.item_teacher,parent,false);
+    public AdapterTeach.ItemHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+       View view = LayoutInflater.from(context).inflate(R.layout.item_teach,parent,false);
         return new ItemHolder(view);
     }
 

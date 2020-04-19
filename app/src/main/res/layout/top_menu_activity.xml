@@ -10,6 +10,14 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
+        <ImageView
+            android:padding="@dimen/iv_height_10"
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/iv_height_45"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:tint="@color/white" />
+
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"

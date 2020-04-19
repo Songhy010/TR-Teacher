@@ -2,21 +2,27 @@ package com.tosrean.teacher.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 import com.tosrean.teacher.R;
-import com.tosrean.teacher.adapter.AdapterPager;
+import com.tosrean.teacher.adapter.AdapterTeach;
 import com.tosrean.teacher.util.MyFunction;
 import com.tosrean.teacher.util.Tools;
 
 public class ActivityHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +32,23 @@ public class ActivityHome extends AppCompatActivity implements NavigationView.On
         initView();
     }
     private void initView(){
+        initToolbar();
         initNavigation();
         initTeacher();
+    }
+
+    private void initToolbar() {
+        drawer = findViewById(R.id.drawer);
+        final ImageView iv_back = findViewById(R.id.iv_back);
+        final TextView tv_title = findViewById(R.id.tv_title);
+        tv_title.setText(getString(R.string.app_name));
+        iv_back.setImageDrawable(getResources().getDrawable(R.drawable.ic_dehaze));
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawer.openDrawer(GravityCompat.START);
+            }
+        });
     }
 
     private void initNavigation() {
@@ -50,10 +71,9 @@ public class ActivityHome extends AppCompatActivity implements NavigationView.On
     }
 
     private void initTeacher(){
-        final LinearLayoutManager manager;
-        final RecyclerView recycler = findViewById(R.id.recycler_teacher);
-        manager = new LinearLayoutManager(this, RecyclerView.VERTICAL,false);
+        final RecyclerView recycler = findViewById(R.id.recycler);
+        final LinearLayoutManager manager = new LinearLayoutManager(this, RecyclerView.VERTICAL,false);
         recycler.setLayoutManager(manager);
-        recycler.setAdapter(new AdapterPager(this,null));
+        recycler.setAdapter(new AdapterTeach(this,null));
     }
 }

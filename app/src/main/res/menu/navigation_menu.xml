@@ -10,22 +10,18 @@
                 android:title="@string/add_class"/>
             <item
                 android:id="@+id/menu_teacher"
-                android:icon="@drawable/img_teacher"
                 android:title="@string/teacher"/>
             <item
                 android:id="@+id/menu_student"
-                android:icon="@drawable/img_setting"
                 android:title="@string/student"/>
     <group
         android:id="@+id/menu_bottom"
         android:checkableBehavior="none">
             <item
                 android:id="@+id/menu_setting"
-                android:icon="@drawable/img_setting"
                 android:title="@string/setting"/>
             <item
                 android:id="@+id/menu_logout"
-                android:icon="@drawable/img_setting"
                 android:title="Logout"/>
         </group>
     </group>
