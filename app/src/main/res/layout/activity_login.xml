@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_color"
+    tools:context=".activity.ActivityLogin">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:padding="@dimen/iv_height_25"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/iv_height_25"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:background="@drawable/edt_shape"
+
+            android:layout_marginTop="@dimen/iv_height_25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:tint="@color/grey"
+                android:padding="@dimen/iv_height_8"
+                android:id="@+id/email"
+                android:layout_width="@dimen/iv_height_40"
+                android:layout_height="@dimen/iv_height_40"
+                android:src="@drawable/ic_mail"/>
+            <EditText
+                android:textSize="@dimen/text_size_normal"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/email"
+                android:paddingLeft="@dimen/iv_height_25"
+                android:paddingTop="@dimen/iv_height_5"
+                android:paddingBottom="@dimen/iv_height_5"
+                android:hint="Email"
+                android:id="@+id/edt_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@drawable/edt_shape"
+            android:layout_marginTop="@dimen/iv_height_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/pass"
+                android:padding="@dimen/iv_height_8"
+                android:tint="@color/grey"
+                android:layout_width="@dimen/iv_height_40"
+                android:layout_height="@dimen/iv_height_40"
+                android:src="@drawable/ic_lock"/>
+            <ImageView
+                android:id="@+id/iv_eye"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/iv_height_13"
+                android:tint="@color/grey"
+                android:layout_width="@dimen/iv_height_40"
+                android:layout_height="@dimen/iv_height_40"
+                android:src="@drawable/img_eye"/>
+            <EditText
+                android:textSize="@dimen/text_size_normal"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/pass"
+                android:layout_toLeftOf="@+id/iv_eye"
+                android:paddingBottom="@dimen/iv_height_5"
+                android:paddingTop="@dimen/iv_height_5"
+                android:paddingLeft="@dimen/iv_height_25"
+                android:id="@+id/edt_pwd"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <Button
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/edt_shape"
+            android:layout_marginTop="@dimen/iv_height_30"
+            android:id="@+id/btnsignin"
+            android:text="SIGN IN"
+            android:layout_below="@+id/edtpwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/iv_height_40"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

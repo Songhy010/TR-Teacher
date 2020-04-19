@@ -30,9 +30,17 @@ public class AppController extends com.android.volley.my.AppController {
 
        /* final String global = MyFunction.getInstance().getDecrypted(this, MyFunction.getInstance().readFileAsset(this, getFilename()));
         Global.arData = global.split(";");*/
-//http://sokhay.tcode.biz/wp-api/auth.php?api_id=home&type=pull
         Global.arData = new String[100];
-        Global.arData[0] = "http://chekromlek.com/";
+        Global.arData[0] = "https://app-tr-server.herokuapp.com/";
+        Global.arData[1] = "T0$r3@n";
+        Global.arData[2] = "$3m$0nghy-T0$r3@n";
+        Global.arData[3] = "api/";
+        Global.arData[4] = "teacher/";
+        Global.arData[5] = "login";
+        Global.arData[6] = "username";
+        Global.arData[7] = "pwd";
+        Global.arData[8] = "code";
+
 /*
         String s = "";
         for (int i = 0; i < Global.arData.length; i++) {

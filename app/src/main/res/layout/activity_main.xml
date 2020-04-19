@@ -8,5 +8,4 @@
     tools:context=".activity.ActivityMain">
     <include layout="@layout/top_menu_activity"/>
 
-
 </LinearLayout>

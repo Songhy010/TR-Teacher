@@ -5,9 +5,6 @@ import android.graphics.Typeface;
 import android.text.TextPaint;
 import android.text.style.MetricAffectingSpan;
 
-/**
- * Created by phearum on 1/19/16.
- */
 public class CustomTypefaceSpan extends MetricAffectingSpan {
     private final Typeface typeface;
 

@@ -817,11 +817,12 @@ public class MyFunction {
                 @Override
                 public Map<String, String> getHeaders() {
                     final Map<String, String> params = new HashMap<>();
-                    final String cred = String.format("%s:%s", Global.arData[3], Global.arData[4]);
+                    final String cred = String.format("%s:%s", Global.arData[1], Global.arData[2]);
                     final String auth = "Basic " + Base64.encodeToString(cred.getBytes(), Base64.DEFAULT);
                     params.put("Authorization", auth);
                     return params;
                 }
+
                 @Override
                 protected Response<String> parseNetworkResponse(NetworkResponse response) {
                     try {
@@ -1162,7 +1163,7 @@ public class MyFunction {
             ((Activity)context).runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    okhttpListenner.onSuccess(response.toString());
+                    okhttpListenner.onError(response.toString());
                 }
             });
         }
